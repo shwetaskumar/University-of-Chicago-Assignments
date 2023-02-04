@@ -1,0 +1,1411 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20222.22.0812.0353                               -->
+<workbook original-version='18.1' source-build='2022.2.1 (20222.22.0812.0353)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='fraudTrain' inline='true' name='federated.0c288mm1lwt0zn1eby8ft1s33cze' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fraudTrain' name='textscan.0osmbr20ilsw7i111wgqt0mwk0tp'>
+            <connection class='textscan' directory='C:/Users/Administrator/Downloads/DS for Consulting/Module 7' filename='fraudTrain.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation all='true' name='fraudTrain.csv+' type='union'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' />
+            <column datatype='datetime' name='trans_date_trans_time' />
+            <column datatype='integer' name='cc_num' />
+            <column datatype='string' name='merchant' />
+            <column datatype='string' name='category' />
+            <column datatype='real' name='amt' />
+            <column datatype='string' name='first' />
+            <column datatype='string' name='last' />
+            <column datatype='string' name='gender' />
+            <column datatype='string' name='street' />
+            <column datatype='string' name='city' />
+            <column datatype='string' name='state' />
+            <column datatype='integer' name='zip' />
+            <column datatype='real' name='lat' />
+            <column datatype='real' name='long' />
+            <column datatype='integer' name='city_pop' />
+            <column datatype='string' name='job' />
+            <column datatype='date' name='dob' />
+            <column datatype='string' name='trans_num' />
+            <column datatype='integer' name='unix_time' />
+            <column datatype='real' name='merch_lat' />
+            <column datatype='real' name='merch_long' />
+            <column datatype='integer' name='is_fraud' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='textscan.0osmbr20ilsw7i111wgqt0mwk0tp' name='fraudTrain.csv' table='[fraudTrain#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='datetime' name='trans_date_trans_time' ordinal='1' />
+              <column datatype='integer' name='cc_num' ordinal='2' />
+              <column datatype='string' name='merchant' ordinal='3' />
+              <column datatype='string' name='category' ordinal='4' />
+              <column datatype='real' name='amt' ordinal='5' />
+              <column datatype='string' name='first' ordinal='6' />
+              <column datatype='string' name='last' ordinal='7' />
+              <column datatype='string' name='gender' ordinal='8' />
+              <column datatype='string' name='street' ordinal='9' />
+              <column datatype='string' name='city' ordinal='10' />
+              <column datatype='string' name='state' ordinal='11' />
+              <column datatype='integer' name='zip' ordinal='12' />
+              <column datatype='real' name='lat' ordinal='13' />
+              <column datatype='real' name='long' ordinal='14' />
+              <column datatype='integer' name='city_pop' ordinal='15' />
+              <column datatype='string' name='job' ordinal='16' />
+              <column datatype='date' name='dob' ordinal='17' />
+              <column datatype='string' name='trans_num' ordinal='18' />
+              <column datatype='integer' name='unix_time' ordinal='19' />
+              <column datatype='real' name='merch_lat' ordinal='20' />
+              <column datatype='real' name='merch_long' ordinal='21' />
+              <column datatype='integer' name='is_fraud' ordinal='22' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0osmbr20ilsw7i111wgqt0mwk0tp' name='fraudTest.csv' table='[fraudTest#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='datetime' name='trans_date_trans_time' ordinal='1' />
+              <column datatype='integer' name='cc_num' ordinal='2' />
+              <column datatype='string' name='merchant' ordinal='3' />
+              <column datatype='string' name='category' ordinal='4' />
+              <column datatype='real' name='amt' ordinal='5' />
+              <column datatype='string' name='first' ordinal='6' />
+              <column datatype='string' name='last' ordinal='7' />
+              <column datatype='string' name='gender' ordinal='8' />
+              <column datatype='string' name='street' ordinal='9' />
+              <column datatype='string' name='city' ordinal='10' />
+              <column datatype='string' name='state' ordinal='11' />
+              <column datatype='integer' name='zip' ordinal='12' />
+              <column datatype='real' name='lat' ordinal='13' />
+              <column datatype='real' name='long' ordinal='14' />
+              <column datatype='integer' name='city_pop' ordinal='15' />
+              <column datatype='string' name='job' ordinal='16' />
+              <column datatype='date' name='dob' ordinal='17' />
+              <column datatype='string' name='trans_num' ordinal='18' />
+              <column datatype='integer' name='unix_time' ordinal='19' />
+              <column datatype='real' name='merch_lat' ordinal='20' />
+              <column datatype='real' name='merch_long' ordinal='21' />
+              <column datatype='integer' name='is_fraud' ordinal='22' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation all='true' name='fraudTrain.csv+' type='union'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='F1' />
+            <column datatype='datetime' name='trans_date_trans_time' />
+            <column datatype='integer' name='cc_num' />
+            <column datatype='string' name='merchant' />
+            <column datatype='string' name='category' />
+            <column datatype='real' name='amt' />
+            <column datatype='string' name='first' />
+            <column datatype='string' name='last' />
+            <column datatype='string' name='gender' />
+            <column datatype='string' name='street' />
+            <column datatype='string' name='city' />
+            <column datatype='string' name='state' />
+            <column datatype='integer' name='zip' />
+            <column datatype='real' name='lat' />
+            <column datatype='real' name='long' />
+            <column datatype='integer' name='city_pop' />
+            <column datatype='string' name='job' />
+            <column datatype='date' name='dob' />
+            <column datatype='string' name='trans_num' />
+            <column datatype='integer' name='unix_time' />
+            <column datatype='real' name='merch_lat' />
+            <column datatype='real' name='merch_long' />
+            <column datatype='integer' name='is_fraud' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='textscan.0osmbr20ilsw7i111wgqt0mwk0tp' name='fraudTrain.csv' table='[fraudTrain#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='datetime' name='trans_date_trans_time' ordinal='1' />
+              <column datatype='integer' name='cc_num' ordinal='2' />
+              <column datatype='string' name='merchant' ordinal='3' />
+              <column datatype='string' name='category' ordinal='4' />
+              <column datatype='real' name='amt' ordinal='5' />
+              <column datatype='string' name='first' ordinal='6' />
+              <column datatype='string' name='last' ordinal='7' />
+              <column datatype='string' name='gender' ordinal='8' />
+              <column datatype='string' name='street' ordinal='9' />
+              <column datatype='string' name='city' ordinal='10' />
+              <column datatype='string' name='state' ordinal='11' />
+              <column datatype='integer' name='zip' ordinal='12' />
+              <column datatype='real' name='lat' ordinal='13' />
+              <column datatype='real' name='long' ordinal='14' />
+              <column datatype='integer' name='city_pop' ordinal='15' />
+              <column datatype='string' name='job' ordinal='16' />
+              <column datatype='date' name='dob' ordinal='17' />
+              <column datatype='string' name='trans_num' ordinal='18' />
+              <column datatype='integer' name='unix_time' ordinal='19' />
+              <column datatype='real' name='merch_lat' ordinal='20' />
+              <column datatype='real' name='merch_long' ordinal='21' />
+              <column datatype='integer' name='is_fraud' ordinal='22' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0osmbr20ilsw7i111wgqt0mwk0tp' name='fraudTest.csv' table='[fraudTest#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='datetime' name='trans_date_trans_time' ordinal='1' />
+              <column datatype='integer' name='cc_num' ordinal='2' />
+              <column datatype='string' name='merchant' ordinal='3' />
+              <column datatype='string' name='category' ordinal='4' />
+              <column datatype='real' name='amt' ordinal='5' />
+              <column datatype='string' name='first' ordinal='6' />
+              <column datatype='string' name='last' ordinal='7' />
+              <column datatype='string' name='gender' ordinal='8' />
+              <column datatype='string' name='street' ordinal='9' />
+              <column datatype='string' name='city' ordinal='10' />
+              <column datatype='string' name='state' ordinal='11' />
+              <column datatype='integer' name='zip' ordinal='12' />
+              <column datatype='real' name='lat' ordinal='13' />
+              <column datatype='real' name='long' ordinal='14' />
+              <column datatype='integer' name='city_pop' ordinal='15' />
+              <column datatype='string' name='job' ordinal='16' />
+              <column datatype='date' name='dob' ordinal='17' />
+              <column datatype='string' name='trans_num' ordinal='18' />
+              <column datatype='integer' name='unix_time' ordinal='19' />
+              <column datatype='real' name='merch_lat' ordinal='20' />
+              <column datatype='real' name='merch_long' ordinal='21' />
+              <column datatype='integer' name='is_fraud' ordinal='22' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trans_date_trans_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[trans_date_trans_time]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>trans_date_trans_time</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cc_num</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cc_num]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>cc_num</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>merchant</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[merchant]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>merchant</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>amt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[amt]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>amt</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[first]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>first</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[last]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>last</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>street</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[street]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>street</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>zip</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[zip]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>zip</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[lat]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>lat</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>long</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[long]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>long</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city_pop</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[city_pop]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>city_pop</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>job</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[job]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>job</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dob</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[dob]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>dob</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trans_num</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[trans_num]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>trans_num</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>unix_time</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[unix_time]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>unix_time</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>merch_lat</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[merch_lat]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>merch_lat</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>merch_long</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[merch_long]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>merch_long</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_fraud</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_fraud]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>is_fraud</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[fraudTrain.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Amt (bin) 2' datatype='integer' name='[Amt (bin) 2]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[amt]' peg='0' size='20' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Amt (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='2' formula='[amt]' peg='0' size='367' />
+      </column>
+      <column caption='Transaction Hour' datatype='integer' name='[Calculation_1492943307957280769]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;hour&quot;,[trans_date_trans_time],&quot;Sunday&quot;)' />
+      </column>
+      <column caption='Hour' datatype='integer' name='[Calculation_1585830049517711361]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='DATEPART(&quot;hour&quot;, [trans_date_trans_time])' />
+      </column>
+      <column caption='Is Fraud (copy)' datatype='boolean' datatype-customized='true' name='[Is Fraud (copy)_1585830049507721216]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [is_fraud] == 1 THEN TRUE ELSE FALSE END' />
+      </column>
+      <column aggregation='None' datatype='integer' name='[Transaction Hour (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='-1' formula='[Calculation_1492943307957280769]' peg='0' size='1.2' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='fraudTrain.csv' datatype='table' name='[__tableau_internal_object_id__].[fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B]' role='measure' type='quantitative' />
+      <column caption='Amt' datatype='real' name='[amt]' role='measure' type='quantitative' />
+      <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+      <column caption='Cc Num' datatype='integer' name='[cc_num]' role='dimension' type='ordinal' />
+      <column caption='City' datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='City Pop' datatype='integer' name='[city_pop]' role='measure' type='quantitative' />
+      <column caption='Dob' datatype='date' name='[dob]' role='dimension' type='ordinal' />
+      <column caption='First' datatype='string' name='[first]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Is Fraud' datatype='integer' name='[is_fraud]' role='measure' type='quantitative' />
+      <column caption='Job' datatype='string' name='[job]' role='dimension' type='nominal' />
+      <column caption='Last' datatype='string' name='[last]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Lat' datatype='real' name='[lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Long' datatype='real' name='[long]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Merch Lat' datatype='real' name='[merch_lat]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='Merch Long' datatype='real' name='[merch_long]' role='measure' type='quantitative' />
+      <column caption='Merchant' datatype='string' name='[merchant]' role='dimension' type='nominal' />
+      <column caption='State' datatype='string' name='[state]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='Street' datatype='string' name='[street]' role='dimension' type='nominal' />
+      <column caption='Trans Date Trans Time' datatype='datetime' name='[trans_date_trans_time]' role='dimension' type='ordinal' />
+      <column caption='Trans Num' datatype='string' name='[trans_num]' role='dimension' type='nominal' />
+      <column caption='Unix Time' datatype='integer' name='[unix_time]' role='measure' type='quantitative' />
+      <column aggregation='Sum' caption='Zip' datatype='integer' default-format='*00000' name='[zip]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:category:nk]' palette='red_10_0' type='palette'>
+            <map to='#ae123a'>
+              <bucket>&quot;gas_transport&quot;</bucket>
+            </map>
+            <map to='#c11a3b'>
+              <bucket>&quot;home&quot;</bucket>
+            </map>
+            <map to='#ca223c'>
+              <bucket>&quot;grocery_pos&quot;</bucket>
+            </map>
+            <map to='#ca223c'>
+              <bucket>&quot;shopping_pos&quot;</bucket>
+            </map>
+            <map to='#d3293d'>
+              <bucket>&quot;kids_pets&quot;</bucket>
+            </map>
+            <map to='#da323f'>
+              <bucket>&quot;shopping_net&quot;</bucket>
+            </map>
+            <map to='#e13b42'>
+              <bucket>&quot;entertainment&quot;</bucket>
+            </map>
+            <map to='#e74545'>
+              <bucket>&quot;food_dining&quot;</bucket>
+            </map>
+            <map to='#ec5049'>
+              <bucket>&quot;personal_care&quot;</bucket>
+            </map>
+            <map to='#f05c4d'>
+              <bucket>&quot;health_fitness&quot;</bucket>
+            </map>
+            <map to='#f36754'>
+              <bucket>&quot;misc_pos&quot;</bucket>
+            </map>
+            <map to='#f5715d'>
+              <bucket>&quot;misc_net&quot;</bucket>
+            </map>
+            <map to='#f77b66'>
+              <bucket>&quot;grocery_net&quot;</bucket>
+            </map>
+            <map to='#f9856e'>
+              <bucket>&quot;travel&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1' />
+        <field-sort-custom-order field='trans_date_trans_time' />
+        <field-sort-custom-order field='Calculation_1585830049517711361' />
+        <field-sort-custom-order field='cc_num' />
+        <field-sort-custom-order field='merchant' />
+        <field-sort-custom-order field='category' />
+        <field-sort-custom-order field='amt' />
+        <field-sort-custom-order field='first' />
+        <field-sort-custom-order field='last' />
+        <field-sort-custom-order field='gender' />
+        <field-sort-custom-order field='street' />
+        <field-sort-custom-order field='city' />
+        <field-sort-custom-order field='state' />
+        <field-sort-custom-order field='zip' />
+        <field-sort-custom-order field='lat' />
+        <field-sort-custom-order field='long' />
+        <field-sort-custom-order field='city_pop' />
+        <field-sort-custom-order field='job' />
+        <field-sort-custom-order field='dob' />
+        <field-sort-custom-order field='trans_num' />
+        <field-sort-custom-order field='unix_time' />
+        <field-sort-custom-order field='merch_lat' />
+        <field-sort-custom-order field='merch_long' />
+        <field-sort-custom-order field='is_fraud' />
+        <field-sort-custom-order field='Table Name' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='fraudTrain.csv' id='fraudTrain.csv_14F20134A7474D63BC3A144BC4ACAA3B'>
+            <properties context=''>
+              <relation all='true' name='fraudTrain.csv+' type='union'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='F1' />
+                  <column datatype='datetime' name='trans_date_trans_time' />
+                  <column datatype='integer' name='cc_num' />
+                  <column datatype='string' name='merchant' />
+                  <column datatype='string' name='category' />
+                  <column datatype='real' name='amt' />
+                  <column datatype='string' name='first' />
+                  <column datatype='string' name='last' />
+                  <column datatype='string' name='gender' />
+                  <column datatype='string' name='street' />
+                  <column datatype='string' name='city' />
+                  <column datatype='string' name='state' />
+                  <column datatype='integer' name='zip' />
+                  <column datatype='real' name='lat' />
+                  <column datatype='real' name='long' />
+                  <column datatype='integer' name='city_pop' />
+                  <column datatype='string' name='job' />
+                  <column datatype='date' name='dob' />
+                  <column datatype='string' name='trans_num' />
+                  <column datatype='integer' name='unix_time' />
+                  <column datatype='real' name='merch_lat' />
+                  <column datatype='real' name='merch_long' />
+                  <column datatype='integer' name='is_fraud' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='textscan.0osmbr20ilsw7i111wgqt0mwk0tp' name='fraudTrain.csv' table='[fraudTrain#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='datetime' name='trans_date_trans_time' ordinal='1' />
+                    <column datatype='integer' name='cc_num' ordinal='2' />
+                    <column datatype='string' name='merchant' ordinal='3' />
+                    <column datatype='string' name='category' ordinal='4' />
+                    <column datatype='real' name='amt' ordinal='5' />
+                    <column datatype='string' name='first' ordinal='6' />
+                    <column datatype='string' name='last' ordinal='7' />
+                    <column datatype='string' name='gender' ordinal='8' />
+                    <column datatype='string' name='street' ordinal='9' />
+                    <column datatype='string' name='city' ordinal='10' />
+                    <column datatype='string' name='state' ordinal='11' />
+                    <column datatype='integer' name='zip' ordinal='12' />
+                    <column datatype='real' name='lat' ordinal='13' />
+                    <column datatype='real' name='long' ordinal='14' />
+                    <column datatype='integer' name='city_pop' ordinal='15' />
+                    <column datatype='string' name='job' ordinal='16' />
+                    <column datatype='date' name='dob' ordinal='17' />
+                    <column datatype='string' name='trans_num' ordinal='18' />
+                    <column datatype='integer' name='unix_time' ordinal='19' />
+                    <column datatype='real' name='merch_lat' ordinal='20' />
+                    <column datatype='real' name='merch_long' ordinal='21' />
+                    <column datatype='integer' name='is_fraud' ordinal='22' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.0osmbr20ilsw7i111wgqt0mwk0tp' name='fraudTest.csv' table='[fraudTest#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='F1' ordinal='0' />
+                    <column datatype='datetime' name='trans_date_trans_time' ordinal='1' />
+                    <column datatype='integer' name='cc_num' ordinal='2' />
+                    <column datatype='string' name='merchant' ordinal='3' />
+                    <column datatype='string' name='category' ordinal='4' />
+                    <column datatype='real' name='amt' ordinal='5' />
+                    <column datatype='string' name='first' ordinal='6' />
+                    <column datatype='string' name='last' ordinal='7' />
+                    <column datatype='string' name='gender' ordinal='8' />
+                    <column datatype='string' name='street' ordinal='9' />
+                    <column datatype='string' name='city' ordinal='10' />
+                    <column datatype='string' name='state' ordinal='11' />
+                    <column datatype='integer' name='zip' ordinal='12' />
+                    <column datatype='real' name='lat' ordinal='13' />
+                    <column datatype='real' name='long' ordinal='14' />
+                    <column datatype='integer' name='city_pop' ordinal='15' />
+                    <column datatype='string' name='job' ordinal='16' />
+                    <column datatype='date' name='dob' ordinal='17' />
+                    <column datatype='string' name='trans_num' ordinal='18' />
+                    <column datatype='integer' name='unix_time' ordinal='19' />
+                    <column datatype='real' name='merch_lat' ordinal='20' />
+                    <column datatype='real' name='merch_long' ordinal='21' />
+                    <column datatype='integer' name='is_fraud' ordinal='22' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text />
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fraudTrain' name='federated.0c288mm1lwt0zn1eby8ft1s33cze' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c288mm1lwt0zn1eby8ft1s33cze'>
+            <column caption='Category' datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column-instance column='[trans_num]' derivation='Count' name='[cnt:trans_num:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[category]' derivation='None' name='[none:category:nk]' pivot='key' type='nominal' />
+            <column caption='Trans Num' datatype='string' name='[trans_num]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]' direction='DESC' using='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[cnt:trans_num:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[cnt:trans_num:qk]' value='15' />
+            <format attr='title' class='0' field='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[cnt:trans_num:qk]' scope='rows' value='Transactions' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]' value='112' />
+            <format attr='height' field='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]' value='24' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]' value='-90' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#862633' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[cnt:trans_num:qk]</rows>
+        <cols>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]</cols>
+      </table>
+      <simple-id uuid='{8C013975-FB1F-4D75-8E04-72635F7ACB07}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fraudTrain' name='federated.0c288mm1lwt0zn1eby8ft1s33cze' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c288mm1lwt0zn1eby8ft1s33cze'>
+            <column caption='Transaction Hour' datatype='integer' name='[Calculation_1492943307957280769]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='DATEPART(&quot;hour&quot;,[trans_date_trans_time],&quot;Sunday&quot;)' />
+            </column>
+            <column aggregation='None' datatype='integer' name='[Transaction Hour (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='-1' formula='[Calculation_1492943307957280769]' peg='0' size='1.2' />
+            </column>
+            <column-instance column='[Calculation_1492943307957280769]' derivation='Count' name='[cnt:Calculation_1492943307957280769:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Transaction Hour (bin)]' derivation='None' name='[none:Transaction Hour (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Trans Date Trans Time' datatype='datetime' name='[trans_date_trans_time]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[cnt:Calculation_1492943307957280769:qk]</rows>
+        <cols>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Transaction Hour (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[Transaction Hour (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{031F87F8-1F41-4CA3-98A7-EFFB13C4CFE2}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fraudTrain' name='federated.0c288mm1lwt0zn1eby8ft1s33cze' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0c288mm1lwt0zn1eby8ft1s33cze'>
+            <column aggregation='None' caption='Amt (bin) 2' datatype='integer' name='[Amt (bin) 2]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[amt]' peg='0' size='20' />
+            </column>
+            <column caption='Amt' datatype='real' name='[amt]' role='measure' type='quantitative' />
+            <column-instance column='[amt]' derivation='Count' name='[cnt:amt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Amt (bin) 2]' derivation='None' name='[none:Amt (bin) 2:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Amt (bin) 2:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='0' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='1' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='2' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='3' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='4' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='5' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='6' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='7' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='8' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='9' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='10' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='11' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='12' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='13' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='14' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='15' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='16' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='17' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='18' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='19' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='20' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='21' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='22' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='23' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='24' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='25' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='26' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='27' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='28' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='29' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='30' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='31' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='32' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='33' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='34' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='35' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='36' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='37' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='38' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='39' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='40' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='41' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='42' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='43' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='44' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='45' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='46' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='47' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='48' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='49' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='50' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='51' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='52' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='53' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='54' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='55' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='56' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='57' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='58' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='59' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='60' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='61' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='62' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='63' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='64' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='65' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='66' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='67' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='68' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='69' />
+              <groupfilter function='member' level='[none:Amt (bin) 2:ok]' member='70' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Amt (bin) 2:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[cnt:amt:qk]</rows>
+        <cols>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Amt (bin) 2:ok]</cols>
+        <show-full-range>
+          <column>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[Amt (bin) 2]</column>
+          <column>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Amt (bin):qk]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{FCB71165-9C1A-4653-B68F-943B8739D180}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Is Fraud (copy)_1585830049507721216:nk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:category:nk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:is_fraud:qk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:trans_num:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{66CDDB54-FA75-4FB7-B72D-2C191A634F4A}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[hr:trans_date_trans_time:ok]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Is Fraud (copy)_1585830049507721216:nk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:trans_num:nk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[yr:trans_date_trans_time:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FE4CD3BC-43AF-4566-9C0E-F60F6EA347B7}' />
+    </window>
+    <window class='worksheet' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Amt (bin) 2:ok]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Amt (bin):qk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:Is Fraud (copy)_1585830049507721216:nk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[none:amt:qk]</field>
+            <field>[federated.0c288mm1lwt0zn1eby8ft1s33cze].[sum:amt:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C32AB729-FC3F-4589-981E-FB287895010E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 3' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAZe0lEQVR4nO3daWwk6X3f8W/1yfu+76s55FwczrGzh3Z1rJKVbTkb7VpJ7EARnBc5DCFR
+      AiR5kQjZyEiMAEKAALKiRFZkKFLkBLbklbJyFrLlTbT3cDgc3jebbLLJPtj33V1VeTFZ7nBm
+      WNRwZprcqf8HIND9dFU/TzX71/XUU9VPK7qu6whhUpbjboAQx0kCIExNAiBMTQIgTE0CIExN
+      AiBMTQIgTO3YAiCnH8RJcGwBUFX1uKoWYo90gYSpSQCEqUkAhKlJAISpSQCEqUkAhKnZjr6q
+      TiSwzbo3SGfvAKWkWVj10NLZR3NNKUuLCxRsFQy7uvD7dmluqsfj8dLR2Y6iKAB4d+MUCtqH
+      jbFZaKuvfNBtEuKXduQAaGqWpXU/Fy+eQ1N1bozd5MKVy4yPjaM2VWKraacsssJGuInoth89
+      tUvGVr/35gf4t9/9BZuB2N79jsYqfv+f/OqDbZEQ9+HIASikQvj8YSbGx3BUNqNbLdhtdsoU
+      hWAyRXdLJVWlDYz5IqT9m/ijlTz/3Ck0Tdv7gzvPBuvk8/kH2yIh7sORA2AtqaKxsZ7Ri8Nc
+      uzaBAmiaRhZoKSshnkyTj0aob3CRTHdQW6ax4g3R316PzWKhUCgAyh3PqmC32x9ke4S4L0cP
+      gL2crqYyJiam6Dt1mhI1zsTEBC3dA3Q0VDAzO8OutZyR+lK86TraO5pZXlpF1+v2dYOEOE4P
+      cBCs0No9QGv3B/fLuVTfsvfo2fOje7fbO1oBGHANHL06IR4BGQYVpiYBEKYmARCmJgEQpiYB
+      EKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCm
+      JgEQpiYBEKYmARCmdvRZIXSNyfFraFYnLZ19OHJhVrwBahra6Wut5ubUDAXFyeXRM3jcXrq6
+      W1hYdHPq1IBMiyJOjCPvAXRNJZ5V6entp6mukqWNHS5fvER0x8P62hKtfWcZrFdY9CWJRmOs
+      zU9T1dQqb35xohx9D2Cx0tfdQXBnHfdWGSgKKAoOIJ7PU+u0U1VVwWIgSdq/ScBRySeGy2Vq
+      RHGiHDkAeiGNYq+is72Mm4t+rFqBTC5LUof+qkr8wTDhiJ/O3hECqQ46mkqZXtzg/KlumRpR
+      nBhHDoBiK0VL77C0qzJy7hRWNc3c/ALDZ89TXe4gvbqEWttNS6UDZ1c7dXXV5Hd86Lou3SBx
+      Yhw9AIqFtu5+2j4osFdw7vz5vce7+0/t3a6rqwGguaUFIU4SGQYVpiYBEKYmARCmJgEQpiYB
+      EKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCmJgEQpiYBEKYmARCm
+      JgEQpiYBEKb2wAGIRcLkChq6lmfb6yWbVwGdaChAOJYAdNLpDADJRBJdv3MuICGOzwMFIJ+O
+      8tYbb+CLpZkav04BnevjN4nsrLO8FWJt5gbhTJ6lhRWS4W0W3N6H1W4hHooHmBtUZ3FhBddg
+      PwBpzcK51nZCni08wV36+keoTNuZ2AyTDGwxFo/x9NNPous6qqrKzHDiRDhyAFLhTZY3g1Ra
+      MziyTuwogI6qQKnVSkHVyOdyOBw1OBrboJAgns5RW+7AarX+/2e5e2Y4m+3omRTifh353VZW
+      18mLn+3E515ErelEDa4xNn4dZ2UDPZ01XJ8aR9UUnnjKxWpil8GzA1yfmOXSpQtYDGaGk1nj
+      RDE98Mdtc8/grRs1p+m8rfypp57cuz102gXAlcujD1qdEA+V4UGwpqmomoau6xRUtVhtEqJo
+      DgyAruvMvfVjXn17Aa2Q499/7T8Us11CFMWBXaDI1gLf/9HPCDPGytvVnL/6qWK2S4iiODAA
+      tR1DfOVf/xtuzq1it9uwl9cUs11CFIXhMcDWwjXeGF8in8+TzxeK1SYhisYwAA0tHfhWZrhx
+      4wbTi2vFapMQRWM4DBrye7n4qRf5/PMXUCxy3Zx4/BgGoKy6gfkfv8YfrI1R1tTL3/0bv1as
+      dglRFIYBaHFd5qtfOcf66hKzG6FitUmIojkwAImghz/+8euksirv35jkd3/3q8VslxBFcWDH
+      Pp+O4wtGKK+uo7yqmramumK2S4iiOPg8QOdp/vk/GyIZ3aWtysof/PdX+ft/+68Xs21CPHKG
+      xwCKYqGippG/8tmXitUeIYrqwAC8/qc/wFFeidZwludHe4rYJCGK58AADPR28p++9YdErW9y
+      7fUaKlpdfOmLLxezbUI8cgcGoH/kY7zy1T5+/n/eIZzM8am/+ulitkuIojA8vbu7McdazMmv
+      f/ppvvlfvlWsNglRNIYHweXV9US9b/DutQxVNY1FapIQxWMYgIbeEX7nt+vxh1N88oWBYrVJ
+      iKIx7AIlQj4KjlqGh1xsez3FapMQRXNgADKxXV77k+/x3374Z7z79lt849vfL2a7hCiKA7tA
+      mqZicZRRjkI2r/GPvvQ7dzyeZ3ZykmxBo6nLRVkhwup2kJr6Nvpaa7g5NUNecXLl4hk23Ft0
+      d7cyv7DG0JBLpj4RJ8aBe4CymiY+++LLNJYU8Pt9TEzO7HtcUWycGbnI8GAXPq+PZY+Pyxcv
+      EfVtsu5eorX/LKcaFBZ9SWLROKtz09Q0t8ubX5wohgfB3qUbhC2NvPjcWSx2577HFEUhuL3O
+      3NIa7f1nCWxFQVFwAPF8nlqnnaqqChYDSdL+TQKOSj4xXIamaXt/MjWiOG6HDIPWsjD2v3g1
+      vEJpYzdf+NwLe49puRRKWQNPXa3n2s1F7FqBdDZLUoeB6ip8gRChiJ/OvhECqQ46msqYXlzn
+      /FAPNouFQqHAvaZGtNvtj2Azhbg3wwA4q5r5+DNXAHBU758VQrE5iPmX8WZ1RkbO4SDH/OIi
+      w+dGqC6zk15bQq3voaXSQUlXO7V11RSsfnRdl26QODEMA1BaUcPw8DBaIcWfvPYWn/n41b3H
+      FIuNXtfQbUvbOXvu3N69rr5Te7dr626Fp6m5+SE1W4iHwzAAyWiQ69evg14gKX1z8RgyDEBV
+      Qzsfe9pGJJHhr73UX6w2CVE0hmeCUyEP3/nuHzE59hbf/sFPitUmIYrGMADBzRXazjzDb3z+
+      Zfwbi8VqkxBFY9gF6hv9JDeXfsA3v3WTl3/zC8Vq04FyeZVkZv+xSEWpHbvNesAaQhg7MAAx
+      /yrvzEV46bd+G62Q4Uc/+RkXXO3FbNtd3pza4D/+8Xv7yv7lF57lieHjbZf46DqwC5Tc3WLZ
+      u3vrXK2ucXNq5qBFj10urzK/Edz3F4gkj7tZ4iPgwD1A88Alyt/4z3ztazfJZ1I898Lni9mu
+      +7IbS/Evvvnn+8peem6IL37mwjG1SHxUHBgAi72ML/6DL1MoFFAsFmxW6WeLx88h8wLJtTni
+      8SZzngtTkwAIU5MACFOTAAhTkwAIUzMcBTouwWiKeCq3r6yrueqYWiMeZycyAH/0F9P8bGx1
+      X9n3/tXnjqk14nEmXSBhahIAYWoSAGFqDxSAdCLK5paXvKqhq3m2NjfJ5FVAJxz0sRtNADrp
+      VBqARCKBrt85F5AQx+fIAdDUHJ4tHw5LgRs355kcHwOblfHxCSI7btZ2YmzM3SCUzrO0uEoy
+      tM2ie+dhtl2IB3bkUSCL1YFrcIC1+ZtU1rYQCyRoa24luO7BEwzR2zdCVcbKja0wycAWY/EY
+      Tz/9JLquo6qq4cxw99pLFAoqqqreVa6qKoXC3eWaJrPMicMdOQC6rjE59g7V7UMMt9XzfmAT
+      0FEVKLVZKagq2WwOp7MGR2MbSiFJLJ2jvsKJ5ZCZ4e41cZbNZsV6j0uyrVYrtnt8JdJikStZ
+      xeGO3gXKx/HuxIn4Pbi3/LTVlTM2fh17VQM9nd0sz9zgxlqUU+3VOJxOzlwYYXV+Dk2OAcQJ
+      cuQ9gNVRza/8+mduK2mi47Z7Tz355N7toWEXAFcuyze0xMkiw6DC1CQAwtQkAMLUJADC1CQA
+      wtQkAMLUJADC1E7kF2Iepr+4vko2/+GlErWVJTx1pvMYWyROksc+AN99fZJIIrN3f7i7QQIg
+      9kgXSJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmJoEQJiaBECYmgRAmNrRA6Dr
+      ZNMJPFs+APLpOFOTk4TjaXRNw708z8rGNjoaod0w6Dq+HZ9MjShOlCMHQEdne9vL9vat6Q4n
+      JiYZGDrF3NQkfs8iWUc9SmQdbyzHpsdLcGuFUEq956RXQhyXI18OrSgWevr6icVnAdCsdkoc
+      TiqsCjvxBF19A1RXNjO2Eybt3yQQreKTzz2Jpml7f8WZGnH/c+m6TJkoPvTQvg+g6ICuk1Og
+      3uEgnc2jRBNUVzdQ0tRBhT3HZjBGV2N1kadG3P9cH/z499p2mEgiu++xUVfLfW61+Kg7+tyg
+      Wp756WlCoShL7i1c3S2MjV+nrqWb7tYqbk7OULCWcKm7DE+6iq7uNubmFtEaqrCcgG7Q//j5
+      DO/MbO4re/Xf/a1jao04LkfvAlnsDJ8fZfi2sistXXu3Ry9d3rvd3XPrG1inT9++tBDHT4ZB
+      halJAISpSQCEqUkAhKlJAISpPfbzAt2vWCpLJJ7ZV9ZcW47TIS/V40j+q3f4y3E3//WnN/aV
+      /d7fe57TPY3H1CLxKEkXSJiaBECYmgRAmJoEQJiaBECYmowC/ZIS6RzTa/59ZV1N1bQ1VB5T
+      i8TDIAH4JXmDcX7ve2/uK/s7L4zw8sflCtePMukCCVOTAAhTky7QQ/Dt18ZRtQ+/e9zdXM0L
+      Twyw4g2TTOf2yq0WhTO9TcfRRHGARxKATDTA2PQyar7A1WefYnlmiaFTHYxPu7ly8exjNzPE
+      T99dpqBqe/evDLXxwhMDfOenN5ha/fDAuaLUwfe/8hKart/1xX+Lojx2r8tHwSMJwOaWh+GR
+      y1Sk1pjzRNCyaaZuznJ65JL8k4Ef/PkU//MvZ/eVff3Lv0JnU/Uxtci8HkkAdB0UBSwWC6qq
+      kUnG0KwOrBZ584uT5ZEEoKW5idn5WcjEGL7SjTveyKn+FsZvTnP10vkTMSvESTTrDvCNP722
+      r+w3nz/HM+fkZ10flUcSgMqGds6X1qBb7JQ5bAyfGcRut3PpXMVdMwGJD2VyBTz+2L6yZCZH
+      vqDy7df2X6J9qrOeT17sZX4jSDpb2Ct32q1y6fZ9eESjQAql5RV7925NUAUOpxP9tgNAm1XB
+      Zv1wJNZmVdB1Hatlf/nesyrcVf7BzuTOcoty67nurMNqObgOXdexWO5dx73qtljYq+P2EeWD
+      6vhg+yzK/W1fQdX42djqvvJ8QeUToz186yfXce9E98pb6sr5+pd/lT/8s4m71vnGP/01Zt0B
+      vv7D9/eV/+PfuMpwTyPfueN7EKOuVp4938V3fjpBPP3hJGLNtRX8zU+d4X+/v8KiJ7hvnS99
+      7gkC0RTu7ci+8uGeBmwWy75BAYCOpiraGyoZm/fuG0mrrnAy1NXAq28usO778LnsNiv/8MXL
+      vD+3xbuz++d1+q1PnyOTK/DD/zu3r/wTF3o429vE13+0f7sHOxtQ9CLPVqvrOpqmoarqPWd6
+      u9/yDwJlsdz9hvoo1aFpGsoBI0GPug4zv4ZFPw+gKApWqxVFUe75YhiV3+8/7yh13Kv8g8+I
+      e72wD6uOg7avGHUU6zV81HUc6TUs9h7gl7XjWSMQTaKg0NU3QFWZ03D5XCrO8qobTVcor6mn
+      p7PV8HhD13W8G6uE42nAQu+Ai/ISu2EdmUSE5TUPAFX1zXS2NR1Sh4pnbYVYOgdY6R8cpNR+
+      96fQ7VLREKsbWwDUNrXR1lxvXIdWwL2yTDKnoljsDLgGcNqMT/DHwwHcm7dm9W5s7aS5oca4
+      DjXPytISGVXHaithYKAX+z26cLeLBHfwbAcAaOnoobHW+KJBrZBleXGJnKZgKylnoK8b2yGj
+      hru+Lbz+EKDQ3t1LXVW54fKFXJrl5RUKGjjKqhjo7TyZl0Ikfatsp+24XIP09XayMD2NahhT
+      jenpWdp7+hkcdGHPhXB7w4Z1RLYWCavlt+roaWdmavqQVmlMTc/T0zeAa9BFIbrN9m7CcA3f
+      2jwZew0u1yC9XS1MTx5Wh8rU7CK9Ay5cLhfxbTe7d0zgeyfP0ixKRSODLhedLbXMTM8bb4Wa
+      ZW7RTf+Ai0HXAP6VeRIFzXCd5bkpyhraGHS5aG0oZWZu1XD5QjrG0rqfAdcgroF+NhdmSBlX
+      wdz0JHVt3QwOumiqUphb2DBcPhvz4/bFb9XR34t7boasYR06c9NTNLX3MDjooq40z/zy9skM
+      gK2klETITyqdJhoOUcB6yOiRgs2isRuKkMmkCIaiOB3Gn+b2klJiu35SmQzh3SCa5bDeoIKF
+      PLuRGJlUklAkicNuvI6jpIRIMEA6nSEUDIDVcUgdFhQtSzgaJ52KE0lkcBzyae4ocRAKBkln
+      MuwGA1jsxntKRbGi5tNE4klSiRixdAHbIcPSJU4HwUCQTCZD0B/E5jDeDsVqI5+JE0skSSai
+      JLIatkOG/0ocNvyBIJlMmoB/F3uJ8XZYbQ4yiQiJVJp4LEwqr3PYaSaHzUJgN0QmncHv38VZ
+      4jy5XaBkNMSWL0hJeRWtzQ3YrDaM/k+6ruHzbhIMRWnq6KHpkF0uQCoeZmVtg7LqBnq72g49
+      P6HrGtueDRKZHPXN7dRXG+9yQScWCuLbDaNYS+jt6Tz0ZKCaz7K+voGm2Ghrb6fEYcdyyDqJ
+      yC5b2ztYSqrp72k/dDu0Qo6VpSWyupUBl4uSQ7plALGQH99uFHtpJd0dLYcOZ+ezKTyeLXKq
+      Tkd3LxWHdC91XcO35SGWzlHf2EJ1Rdk9p72/XSGXwePZIJFRGXANUuowXl7XdXxbbny7cdq7
+      +6ivqTiZe4BsdJuxqSWC4RitLc2sLc5TMIypztLiMrWVTnZjGbwrs2yHkoZ15BJBbkwuYHU4
+      SYR2mFl0H9IqlfH33mbLFyDo2+TNX7xFJGncPYkFPMwsrRPw+4lGAkzMLB5Sh874tffw+f1U
+      1jeR291kO5o2XMPrXkYvqSYaCpJPhZlZMN4OXVOZvHGdVEHHouUZvz5B4ZDPwPXFaeaW3UQi
+      Ya6/+zZrmz7D5bVChvHxCXbDu0QiMcavjR3y/4OV+Sk82z5yup36mhIW55cNl88ndtkIxNFy
+      KXRdY+LGxKHvka3VOTy+CE6ng9X5SXzh1MkMQCYapmv4Audd7dyYmqdQUO/6LZn9dBLxGKlo
+      hK6hs/R0NBKPpwzXiPq9dAxd4PTQECMXRsnGQoe0ykJrawtWu5Ph02cYGjpNTbnxbjqyG8J1
+      bhSbonP2/EWsBeM3M6jYy2q4evUKa7OTpDI5NM14y3OZJJlcjpLKeoZODZBNGR+X6FoOzVbB
+      yLmznD57juYSiOeN62hoasFutdLRe+vYpK+j2XD5QiZJRX0bnbUl1HcO0llTSvLuH/HZJ5nV
+      uHz5Cs5ciA1/hMI9fg3odqpaIJFIkcornDtzmgqrxiGbQSCSZHT0AkNDQ1wcGWRn04f1lVde
+      ecV4teJzVlYT9vtpbmvDqSVx70Tp7uww6OMpVJc7WV73sLm2Ts5SxvBAl2FXoLSqjs3FSTze
+      HTyeTTr7BqksKzFolUJlTR0NtZUszs7grGmkvrrCYHkoqyhnaXqS6oYm3MsLVDd3U2fYbbKQ
+      TSWpqmugpaGa2blFmjq7KHcefKxRVVOHZ2WB7e1tguE4p06fMe7SKDb0TIS5pVV2vFsolY10
+      NtYYXqToKCmjpaWZXa+bYFKlq934l3Qs9hIivg2iWilabIeY5qS33XjErMyqEVcddLS3srk4
+      i15SQ3Nj7YHL25zlqMkgm5teNja3aOhy0WT42ipUlTm4eXMKn8+H15/gzLlTJ/cY4FHTNXXf
+      Jcwz0zNcGL1gtAaFfGFvT5QIbhHWKuhrbzhwDU1TUffq0JmZmeXCBeM6brz3JvGcwvmLT6DE
+      vCRLm2irKTtwjeD2GrPLW9Q0tnF+qIf5uUWGhocOrkFTmRh7l4K1DD2XIpm38rFnr2I3CIDP
+      s8LaVoASu4NYKkFL1ykGuw/eC+hqjutjYyjOcvKJKDmllGeevoLVIAGelXm2Q3EUNDY2vFx5
+      +jm6WusPXD6XjjE5NYeuWAh5NyjtOMVTo2exH9in0VlbddPT1cZ7775LXtVxjVw17xdi4n43
+      b4yv0Vx/62A5GElh9NYEnV/8/HVKaxpRgGw8QvOpS4ZrBDfmGVsKUF9VCkA4kTNcHlQUZw3P
+      XBzgvWs3GGirRXUYfz5FQlEuXn2GwPIEazsRcjnjHwDU1Ay2ska6a1S2sm105nyEszpNJQe/
+      O4PhOJeuXOWdt37Bc88+xc2bi2AQgFwqRkVDJ9VqgHjzKCWhVWIFqDU4Di4pLcVuzzMw2I/T
+      UW745gewWG04HXbK69toqXBQ1mf05r8lFo2QjDio7xrC1VHOxOSmeQNQ2dTDlYsVtLbc+ke6
+      19YOWcPCuQuXqWpowmG1kI4FieaNhwMbOwcYLW2htbke0HGvuQ+pw3brZJytlJHTfVx7f5zB
+      q8ZXgra0thAOR+gZvsDC1HViWePRFou1hNJSG9XNPZTrFtaXgvQ4jMd06mqqyBY0rly+TCGT
+      xFlRZbi8o7QSuyVNY+dp6i0OVnattBk3i8a2bmob0szPzZLIHbIwYHOUce7CKP5NN1NuLxf7
+      Rw5dp76mnLmVTToHzxDxBWjoajdvF0icVDqadu9LJg5y6xogi+Ew+UEkAMLU/h8eaWg/vFLa
+      3wAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
