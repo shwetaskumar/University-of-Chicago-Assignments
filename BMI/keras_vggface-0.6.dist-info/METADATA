@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: keras-vggface
+Version: 0.6
+Summary: VGGFace implementation with Keras framework
+Home-page: https://github.com/rcmalli/keras-vggface
+Author: Refik Can MALLI
+Author-email: mallir@itu.edu.tr
+License: MIT
+Keywords: keras,vggface,deeplearning
+Platform: UNKNOWN
+Requires-Dist: numpy (>=1.9.1)
+Requires-Dist: scipy (>=0.14)
+Requires-Dist: h5py
+Requires-Dist: pillow
+Requires-Dist: keras
+Requires-Dist: six (>=1.9.0)
+Requires-Dist: pyyaml
+Provides-Extra: tf
+Requires-Dist: tensorflow ; extra == 'tf'
+Provides-Extra: tf_gpu
+Requires-Dist: tensorflow-gpu ; extra == 'tf_gpu'
+
+UNKNOWN
+
+
