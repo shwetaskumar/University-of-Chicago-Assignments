@@ -6,15 +6,9 @@ import tensorflow as tf
 import cvlib as cv
 from tensorflow import keras
 import urllib.request
-import os
 
-def load_model_bmi():
-    if not os.path.isfile('best_bmi_model_v3_3.h5'):
-        urllib.request.urlretrieve('https://github.com/shwetaskumar/University-of-Chicago-Assignments/blob/main/BMI/best_bmi_model_v3_3.h5', 'model.h5')
-    return tf.keras.models.load_model('best_bmi_model_v3_3.h5', compile=False)
 # Load your trained models
-# bmi_model = tf.keras.models.load_model('best_bmi_model_v3_3.h5', compile=False)
-bmi_model = load_model_bmi()
+bmi_model = tf.keras.models.load_model('BMI/best_bmi_model_v3_3.h5', compile=False)
 gender_model = tf.keras.models.load_model('best_gender_model_v1_0.h5')
 
 gender_labels = ["Female","Male"]
