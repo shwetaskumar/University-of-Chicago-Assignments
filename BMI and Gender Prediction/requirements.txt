@@ -1,7 +1,0 @@
-opencv-python
-keras
-tensorflow
-keras_vggface
-cvlib
-numpy
-Pillow
