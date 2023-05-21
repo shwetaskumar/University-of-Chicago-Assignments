@@ -5,7 +5,8 @@ import numpy as np
 import tensorflow as tf
 import cvlib as cv
 from tensorflow import keras
-
+import os
+print(os.getcwd())
 # Load your trained models
 bmi_model = tf.keras.models.load_model('best_bmi_model_v3_3.h5', compile=False)
 gender_model = tf.keras.models.load_model('best_gender_model_v1_0.h5')
