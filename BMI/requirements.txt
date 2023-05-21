@@ -1,8 +1,0 @@
-streamlit
-Pillow
-opencv-python-headless
-numpy
-tensorflow
-keras
-h5py
-cvlib
