@@ -3,8 +3,6 @@ from PIL import Image
 import cv2
 import numpy as np
 import tensorflow as tf
-from keras.models import load_model
-from keras_vggface.utils import preprocess_input
 import cvlib as cv
 from tensorflow import keras
 

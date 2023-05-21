@@ -3,6 +3,4 @@ python3-opencv
 python3-numpy
 python3-tensorflow
 python3-keras
-keras-vggface
-python3-keras-applications
 cvlib
