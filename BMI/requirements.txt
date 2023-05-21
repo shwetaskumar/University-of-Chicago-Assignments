@@ -1,0 +1,8 @@
+streamlit
+Pillow
+opencv-python
+numpy
+tensorflow
+keras
+keras-vggface
+cvlib
