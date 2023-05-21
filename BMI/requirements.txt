@@ -4,5 +4,4 @@ opencv-python-headless
 numpy
 tensorflow
 keras
-keras-vggface
 cvlib
