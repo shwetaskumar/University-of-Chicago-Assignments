@@ -5,6 +5,7 @@ import numpy as np
 import tensorflow as tf
 import cvlib as cv
 from tensorflow import keras
+import tensorrt
 
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 import av
@@ -58,13 +59,6 @@ def process_face(face):
     # image = np.expand_dims(image, axis=0)
     return image
 
-# Function to preprocess the image
-def preprocess_image(image):
-    image = image.resize((224, 224))
-    image = np.array(image) / 255.0
-    image = np.expand_dims(image, axis=0)
-    return image
-
 # Function to predict BMI and gender
 def predict(image):
     image = process_face(image)
@@ -83,14 +77,28 @@ RTC_CONFIGURATION = RTCConfiguration(
 class VideoProcessor:
     def recv(self, frame):
         img = frame.to_ndarray(format="bgr24")
-        
         im_pil = Image.fromarray(img)
-        bmi_prediction, gender_category = predict(im_pil)
-
-        # Display the prediction results
-        st.write("BMI Prediction:", bmi_prediction)
-        st.write("Gender Category:", gender_labels[gender_category])
-
+        
+        # Detect face using cvlib
+        faces, _ = cv.detect_face(np.array(im_pil))
+        
+        for face in faces:
+            (start_x, start_y) = face[0], face[1]
+            (end_x, end_y) = face[2], face[3]
+            
+            # Draw bounding box around the face
+            cv2.rectangle(img, (start_x, start_y), (end_x, end_y), (0, 255, 0), 2)
+            
+            # Crop and process the face image
+            face_image = im_pil.crop((start_x, start_y, end_x, end_y))
+            bmi_prediction, gender_category = predict(face_image)
+            
+            # Display the prediction results on the frame
+            cv2.putText(img, f"BMI: {bmi_prediction:.2f}", (start_x, start_y - 10),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+            cv2.putText(img, f"Gender: {gender_labels[gender_category]}", (start_x, start_y - 40),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        
         return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
