@@ -67,7 +67,7 @@ def preprocess_image(image):
 
 # Function to predict BMI and gender
 def predict(image):
-    image = preprocess_image(image)
+    image = process_face(image)
     bmi_prediction = bmi_model.predict(image)[0][0]  # Assuming single output value for BMI
     gender_prediction = gender_model.predict(image)
     gender_category = np.argmax(gender_prediction)
@@ -84,15 +84,14 @@ class VideoProcessor:
     def recv(self, frame):
         img = frame.to_ndarray(format="bgr24")
         
-        # vision processing
-        # flipped = img[:, ::-1, :]
-
-        # model processing
         im_pil = Image.fromarray(img)
-        results = bmi_model.model(im_pil, size=224)
-        bbox_img = np.array(results.render()[0])
+        bmi_prediction, gender_category = predict(im_pil)
 
-        return av.VideoFrame.from_ndarray(bbox_img, format="bgr24")
+        # Display the prediction results
+        st.write("BMI Prediction:", bmi_prediction)
+        st.write("Gender Category:", gender_labels[gender_category])
+
+        return av.VideoFrame.from_ndarray(img, format="bgr24")
 
 
 webrtc_ctx = webrtc_streamer(
