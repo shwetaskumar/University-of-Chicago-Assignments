@@ -121,4 +121,4 @@ class VideoProcessor:
         # 
         return av.VideoFrame.from_ndarray(img,format="bgr24")
     
-webrtc_streamer(key="edge",mode=WebRtcMode.SENDRECV,video_processor_factory=VideoProcessor,rtc_configuration=RTC_CONFIGURATION,media_stream_constraints={"video": True, "audio": False})
+webrtc_streamer(key="edge",mode=WebRtcMode.SENDRECV,video_processor_factory=VideoProcessor,rtc_configuration=RTC_CONFIGURATION,media_stream_constraints={"video": True, "audio": False}, async_processing=True,)
