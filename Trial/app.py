@@ -75,23 +75,23 @@ class VideoProcessor:
         img = frame.to_ndarray(format="bgr24")
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         
-        # Detect faces using Haar cascades
-        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+        # # Detect faces using Haar cascades
+        # faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
         
-        for (x, y, w, h) in faces:
-            # Draw bounding box around the face
-            cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        # for (x, y, w, h) in faces:
+        #     # Draw bounding box around the face
+        #     cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
             
-            # Crop and process the face image
-            face_image = img[y:y+h, x:x+w]
-            face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
-            bmi_prediction, gender_category = predict(face_image)
+        #     # Crop and process the face image
+        #     face_image = img[y:y+h, x:x+w]
+        #     face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
+        #     bmi_prediction, gender_category = predict(face_image)
             
-            # Display the prediction results on the frame
-            cv2.putText(img, f"BMI: {bmi_prediction:.2f}", (x, y - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
-            cv2.putText(img, f"Gender: {gender_labels[gender_category]}", (x, y - 40),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        #     # Display the prediction results on the frame
+        #     cv2.putText(img, f"BMI: {bmi_prediction:.2f}", (x, y - 10),
+        #                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        #     cv2.putText(img, f"Gender: {gender_labels[gender_category]}", (x, y - 40),
+        #                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         return av.VideoFrame.from_ndarray(img, format="bgr24")
 
