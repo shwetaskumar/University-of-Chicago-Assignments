@@ -5,4 +5,6 @@ python3-tensorflow
 python3-keras
 keras-vggface
 cvlib
-libgl1
+freeglut3-dev
+libgtk2.0-dev
+libgl1-mesa-glx
