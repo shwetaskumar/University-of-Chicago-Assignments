@@ -5,7 +5,6 @@ import numpy as np
 import tensorflow as tf
 import cvlib as cv
 from tensorflow import keras
-import tensorrt
 
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 import av
