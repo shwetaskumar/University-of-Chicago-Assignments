@@ -3,3 +3,9 @@ streamlit_webrtc
 
 opencv-python-headless
 mediapipe==0.8.9.1
+numpy
+tensorflow
+keras
+keras-vggface
+cvlib
+Pillow
