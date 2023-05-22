@@ -3,7 +3,6 @@ from PIL import Image
 import cv2
 import numpy as np
 import tensorflow as tf
-import cvlib as cv
 from tensorflow import keras
 
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
@@ -13,7 +12,7 @@ import av
 bmi_model = tf.keras.models.load_model('Trial/best_bmi_model_v3_3.h5', compile=False)
 gender_model = tf.keras.models.load_model('Trial/best_gender_model_v1_0.h5')
 
-gender_labels = ["Female","Male"]
+gender_labels = ["Female", "Male"]
 
 def image_resize(image, size):
     # Get the dimensions of the image
@@ -55,7 +54,6 @@ def process_face(face):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     image = np.copy(image)
     image = image / 255.0
-    # image = np.expand_dims(image, axis=0)
     return image
 
 # Function to predict BMI and gender
@@ -65,37 +63,34 @@ def predict(image):
     gender_prediction = gender_model.predict(image)
     gender_category = np.argmax(gender_prediction)
     return bmi_prediction, gender_category
-  
-
 
 RTC_CONFIGURATION = RTCConfiguration(
     {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 )
 
+face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 class VideoProcessor:
     def recv(self, frame):
         img = frame.to_ndarray(format="bgr24")
-        im_pil = Image.fromarray(img)
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         
-        # Detect face using cvlib
-        faces, _ = cv.detect_face(np.array(im_pil))
+        # Detect faces using Haar cascades
+        faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
         
-        for face in faces:
-            (start_x, start_y) = face[0], face[1]
-            (end_x, end_y) = face[2], face[3]
-            
+        for (x, y, w, h) in faces:
             # Draw bounding box around the face
-            cv2.rectangle(img, (start_x, start_y), (end_x, end_y), (0, 255, 0), 2)
+            cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 2)
             
             # Crop and process the face image
-            face_image = im_pil.crop((start_x, start_y, end_x, end_y))
+            face_image = img[y:y+h, x:x+w]
+            face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
             bmi_prediction, gender_category = predict(face_image)
             
             # Display the prediction results on the frame
-            cv2.putText(img, f"BMI: {bmi_prediction:.2f}", (start_x, start_y - 10),
+            cv2.putText(img, f"BMI: {bmi_prediction:.2f}", (x, y - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
-            cv2.putText(img, f"Gender: {gender_labels[gender_category]}", (start_x, start_y - 40),
+            cv2.putText(img, f"Gender: {gender_labels[gender_category]}", (x, y - 40),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
         
         return av.VideoFrame.from_ndarray(img, format="bgr24")
