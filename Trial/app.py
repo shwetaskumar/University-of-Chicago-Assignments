@@ -10,8 +10,8 @@ from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 import av
 
 # Load your trained models
-bmi_model = tf.keras.models.load_model('BMI/best_bmi_model_v3_3.h5', compile=False)
-gender_model = tf.keras.models.load_model('BMI/best_gender_model_v1_0.h5')
+bmi_model = tf.keras.models.load_model('Trial/best_bmi_model_v3_3.h5', compile=False)
+gender_model = tf.keras.models.load_model('Trial/best_gender_model_v1_0.h5')
 
 gender_labels = ["Female","Male"]
 
