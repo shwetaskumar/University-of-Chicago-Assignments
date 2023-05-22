@@ -12,9 +12,9 @@ st.title("Test")
 RTC_CONFIGURATION = RTCConfiguration(
     {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
 )
-model = load_model('C:/Users/Administrator/Downloads/UChicago/Spring 2023/ML/Assignments/Project/best_bmi_model_v3_3.h5',compile=False)
-age_model = load_model('C:/Users/Administrator/Downloads/UChicago/Spring 2023/ML/Assignments/Project/best_age_model_v1_2.h5',compile=False)
-gender_model = load_model('best_gender_model_v1_0.h5')
+model = load_model('the New God/best_bmi_model_v3_3.h5',compile=False)
+age_model = load_model('the New God/best_age_model_v1_2.h5',compile=False)
+gender_model = load_model('the New God/best_gender_model_v1_0.h5')
 
 
 # webrtc_streamer(key="Sample")
