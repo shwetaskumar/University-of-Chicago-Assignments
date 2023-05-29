@@ -1,0 +1,23 @@
+Dataset Files: assignment7datasets.zipDownload assignment7datasets.zip
+
+Data
+MoviesDB.txt
+
+Questions
+Find all producers that produced the movie When Harry Met Sally. 
+Find directors who have directed more than 2 movies.  Return the name of the director and the count of movies they directed, ordered by movie count in descending order.
+Find the actors who acted in 5+ movies and the movies in which they acted.  Return the name of the actor, and the title of the films, ordered by the number of films acted per actor in descending order.
+Find the people who were the producer, writer, AND director (the same person who held all 3 roles) at the same time on a film. Return the names of the people and the titles of the films.
+Find all the actors that are exactly 3 degrees away from Tom Hanks.  NOTE: In this case, we want to define a "degree" as a common connection between two people.  So, if Tom Hanks is connected to Gary Sinise by way of them both acting in Apollo 13, then that connection has a path length of 2, and we would consider Gary Sinise to be 1 degree away from Tom Hanks since they both acted in the same movie.
+Update database to reflect new name ("Larry Wachowski") for director "Lana Wachowski".
+Create a section of fun movies whose summary contains the keyword "fun".
+List all the release years and count all movies released in that year.
+List all the movies whose rating >= 90.
+List the top producers who are most likely to entertain new movies production hint: Producers with most movies produced.
+List all the movies along with a number of reviews received. order the results by a number of reviews in descending order.
+Find the shortest path between movies "The Matrix" and "The Matrix Reloaded".
+List all the writers and the list of movies they have written.
+List top 15 actors who have co-acted with each other the most. Ignore The Matrix trilogy for this analysis.
+Submission
+Submit the answers in a text (".txt") file with the naming format: firstname_lastname_assignment8.txt.  
+For each question, you are required to provide the query for the answer along with any assumptions made. Make sure to include the question numbers and question text.
