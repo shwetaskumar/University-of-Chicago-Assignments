@@ -1,0 +1,52 @@
+Download your personal sample from left sidebar, unpack and read it:
+
+dataPath <- "C:/path_to_your_dir/"
+test_dat <- read.table(paste(dataPath,'Week9_Test_Sample.csv',sep = '/'), header=TRUE)
+The sample test_dat has the following format:
+
+test_dat$Resp - response values;
+test_dat$Pred1 - predictor 1 values;
+test_dat$Pred2 - predictor 2 values;
+test_dat$Pred3 - predictor 3 values;
+test_dat$Pred4 - predictor 4 values;
+test_dat$Pred5 - predictor 5 values;
+test_dat$Pred6 - predictor 6 values;
+test_dat$Pred7 - predictor 7 values;
+test_dat$Pred8 - predictor 8 values;
+test_dat$Pred9 - predictor 9 values;
+test_dat$Pred10 - predictor 10 values.
+On the interactive tab, try to select predictors for the model by maximizing R^2 and/or minimizing AIC.
+
+Fit the model with original predictors replaced by principal components as in week 9 workshop.
+Select necessary principal components (factors) to satisfy the questions of the quiz.
+
+Answer the quiz
+
+
+QUIZ:
+Fill text fields and choose correct answer:
+
+1). What is the smallest number of factors sufficient for explanation of at least: 67.47738 % of the total variance of predictors?
+
+2). Which are the factors selected in question 1?
+Factor 1
+Factor 2
+Factor 3
+Factor 4
+Factor 5
+Factor 6
+Factor 7
+Factor 8
+Factor 9
+Factor 10
+3). Fit another linear model with the same response, but predictors replaced by principal components (factors). Which principal components you decide to include in such linear model if you are asked to achive R^2 of at least `0.9*r.squared`, where `r.squared` is R-squared of the model with all original predictors?
+Factor 1
+Factor 2
+Factor 3
+Factor 4
+Factor 5
+Factor 6
+Factor 7
+Factor 8
+Factor 9
+Factor 10

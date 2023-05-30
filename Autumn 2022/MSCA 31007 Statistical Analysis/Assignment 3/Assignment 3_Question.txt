@@ -1,0 +1,27 @@
+Download your uniform(0,1) sample from left sidebar, unpack and read it.
+
+Create variable dataPath equal to path to your local folder where you saved the data file Week3_Test_Sample.csv.
+It should look like:
+
+dataPath<-"C:/Your path"
+Note that in R path is specified with forward slash “/”. Do not end the path with / when you assign dataPath.
+
+Read the data.
+
+dat <- read.table(paste(dataPath,'Week3_Test_Sample.csv',sep = '/'), header=TRUE)
+The sample dat has the following format:
+
+dat$x[1] - mean value of normal distribution;
+dat$x[2] - standard deviation of normal distribution;
+dat$x[3] - intensity of exponential distribution;
+dat$x[4]:dat$x[503] sample from uniform distribution on [0.1].
+Using this sample, create:
+
+Sample datNorm from normal distribution with mean dat$x[1] and standard deviation dat$x[2];
+Sample datExp from exponential distribution with intensity dat$x[3].
+Create matrix res with the two samples:
+
+res<-cbind(datNorm=datNorm,datExp=datExp)
+Save res to a file and upload the file using left sidebar.
+
+write.table(res, file = paste(dataPath,'result.csv',sep = '/'), row.names = F)

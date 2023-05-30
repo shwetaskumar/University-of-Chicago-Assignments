@@ -1,0 +1,38 @@
+Download your personal sample from left sidebar, unpack and read it:
+
+dataPath <- "C:/path_to_your_dir/"
+test_dat <- read.table(paste(dataPath,'Week7_Test_Sample.csv',sep = '/'), header=TRUE)
+The sample test_dat has the following format:
+
+test_dat$Output - output Y values;
+test_dat$Input1 - first predictor values;
+test_dat$Input2 - second predictor values.
+Fit the data with models fit.1, fit.1.2, fit1.3, fit.1.2.3 as in Section 1.2
+
+Answer the questions
+
+You can also see your sample on Interactive tab.
+
+Round the answer to 4 decimal points: round(answer,4)
+
+QUIZ:
+
+Fill text fields and choose correct answer:
+
+1) Sum of Squares explained by Input1 in model fit.1.2 :
+
+2) Sum of Squares unexplained by Input1 in model fit.1.2:
+
+3) Sum of Squares explained by Input2 in model fit.1.3:
+
+4) Sum of Squares unexplained by Input2 in model fit.1.3:
+
+5) F statistic for comparison of fit.1 and fit.1.2.3:
+
+6) P-value for comparison of fit.1 with fit.1.2.3:
+
+7) Which inputs should be removed?
+First
+Second
+Both
+None

@@ -1,0 +1,21 @@
+dataPath <- "C:/path_to_your_dir/"
+data <- read.table(paste(dataPath,'Week1_Test_Sample.csv',sep = '/'), header=TRUE)
+The sample data has the following format:
+
+data$u - sample u;
+data$v - sample v.
+Create variable joint_distribution- matrix of joint distribution P[u,v].
+Create variable u_Marginal equal to the marginal distribution P[u].
+Create variable v_Marginal equal to the marginal distribution P[v].
+Create variable u_Conditional_v equal to the vector of conditional probabilities P[u|v=4].
+Create variable v_Conditional_u equal to the vector of conditional probabilities P[v|u=3].
+Collect all results in variable res:
+
+res <-list(Joint_distribution=joint_distribution,
+           u_Marginal = u_Marginal,
+           v_Marginal = v_Marginal,
+           u_Conditional_v = u_Conditional_v,
+           v_Conditional_u = v_Conditional_u          )
+Save res to a file and upload the file using left sidebar.
+
+saveRDS(res, file = paste(dataPath,'result.rds',sep = '/'))

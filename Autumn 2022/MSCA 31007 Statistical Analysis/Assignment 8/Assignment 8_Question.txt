@@ -1,0 +1,35 @@
+Assignment
+Download your personal sample from left sidebar, unpack and read it:
+
+dataPath <- "C:/path_to_your_dir/"
+test_dat <- read.table(paste(dataPath,'Week8_Test_Sample.csv',sep = '/'), header=TRUE)
+The sample test_dat has the following format:
+
+test_dat$Output - output values;
+test_dat$Treatment - predictor values;
+Fit the data with models lm(Output ~ Treatment) and lm(Output~Treatement-1).
+
+Calculate ANOVA tables necessary for answering questions of the quiz. Answer the questions.
+
+You can also see in the interactive tab how between the groups variation and within the groups variation change when you change coefficients of the model.
+
+
+QUIZ:
+Fill text fields and choose correct answer:
+
+1) Within group sum of squares:
+
+2) Between groups sum of squares
+
+3) Conclusion of utility test:
+	All group means are the same
+	Not all group means are the same
+4) Sum of squares of predictor for the model testing H0:
+ "all group mean values equal to zero"
+
+5) Sum of squares of residuals for the model testing H0:
+ "all group mean values equal to zero""
+
+6) What is the conclusion about equality of all group mean values to zero?
+	All group mean values equal to zero
+	Not all group mean values equal to zero

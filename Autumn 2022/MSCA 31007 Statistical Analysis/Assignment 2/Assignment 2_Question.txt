@@ -1,0 +1,24 @@
+Download your personal sample from left sidebar, unpack and read it:
+
+dataPath <- "C:/path_to_your_dir/"
+df <- read.table(paste0(dataPath, 'sample.csv'), header=TRUE)
+The data sample contains 2 columns of variables: predictor df$x and response df$y.
+
+Calculate standard deviations of df$x and df$y and their correlation coefficient. Round all values to the second decimal and use them to calculate the slope a
+ without fitting linear model to the data`.
+
+Leave a
+ not rounded. Its value will be checked up to the 3 decimal places.
+
+Create variables:
+
+sdX - Standard deviation of df$x
+sdY - Standard deviation of df$y
+cXY - Correlation coefficient of df$x and df$y
+a - slope of the model y~x
+Create variable result as data.frame:
+
+result <- data.frame(sdX=sdX, sdY=sdY, cXY=cXY, a=a)  
+Write the result to a file:
+
+write.table(result, file = paste(dataPath,'result.csv',sep = '/'), row.names = F)
