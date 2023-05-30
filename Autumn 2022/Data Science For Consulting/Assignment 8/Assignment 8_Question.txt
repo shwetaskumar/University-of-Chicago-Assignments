@@ -1,0 +1,25 @@
+Module 8 – The Technical Presentation
+
+The Chief Technology Officer of Broom Solutions, Glinda Broom, has requested your team provide a review of the credit card fraud detection approach and detail on the model or models being employed. Use the presentation structure guidance from Module 5 The presentation structure (and some hints) is:
+
+- A rewrite or restatement of the business problem
+            How does it illustrate understanding of the client’s objectives
+
+- The methodology employed
+            What in the data discovery (EDA) is important for client to understand?
+            Will client understand why the approach(s) were selected
+            Imbalanced data?? Analytic Maturity of Client?
+
+- The performance metrics used to evaluate the model(s) used
+            How will the metrics reflect the effectiveness of the solution? What about bias, overfitting?
+
+- The economic value of the solution
+            You will have to employ some assumptions here??
+
+Assumptions:
+
+The company is open to a more data-driven fraud detection approach, but only if the models show that there is a significant improvement in fraudulent transactions caught
+The recommendation will only be adopted by the company if it can be easily understood and updated by the technology team
+The CTO is not necessarily looking to catch all fraudulent transactions since this is not practical. However, she is more focused on the highest economic value, which is up to you to determine. Some examples include: amount of money saved, amount of customers retained, less disgruntled customers
+We did hear from the CEO that he was concerned with the clients of Broom Solutions sometimes are upset when their customer transactions are denied
+There is a tradeoff between precision and recall, and determining what is the practical metric to prioritize for your approach– for purposes of this exercise use the confusion matrices below

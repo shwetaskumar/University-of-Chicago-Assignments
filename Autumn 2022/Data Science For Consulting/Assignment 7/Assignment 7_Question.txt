@@ -1,0 +1,24 @@
+Module 7 – Credit Card Fraud Detection
+
+Predictive Model Exercise: 
+
+Using:
+
+the datasets FraudTrain.csv and FraudTest.csv
+
+Python Notebook file credit-card-fraud-detection-models.ipynb
+
+and the background training video:
+
+Calculate basic stats descriptive statistics (mean, median, min, max, standard deviation) for each field 
+Visualize distributions of data elements using histograms for key variables and predict which variables you expect to be most correlated with default/churn. 
+Insert (or use code provided) appropriate code to evaluate the credit card fraud detection performance of Decision Trees and Random Forest
+Display the output visually using charts of your choosing and explain your choice. (ROC Curve, Confusion Matrix, Gains Table) 
+In addition to the spreadsheet/code or programming output you submit, include a separate written document of 250-500 words that summarizes:
+a) your interpretation of the data via the Exploratory data analysis
+
+b) your interpretation  of modeling output of Logistic Regression, Decision Tree and Random Forest
+
+c) discuss which variables are most significant and any other unexpected insights.
+
+This assignment is designed to expose you to models and tools the more advanced analyst uses to predict and develop business cases for action. You may need help from a tutor or by watching videos to understand enough to build interpret the decision tree and random forest models.

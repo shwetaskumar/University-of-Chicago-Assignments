@@ -1,0 +1,11 @@
+Module 5 – Preparation for Technical Communication
+
+Using your knowledge of the Fitness Center case, in order to prepare for a technical communication:
+
+1.Rewrite what you defined as part of the Exploratory Data Analysis assignment for Module 4. a) Use the guide provided in the video Module 5 Preview & Assignment.
+
+2.Select two visuals from your exploratory data analysis that you would present to the client to illustrate insight about the data & business. With each visual explain:
+
+  a) How it helps illustrate some insight to the client.
+
+  b) How it helps educate the client on the analytical challenge of the problem.

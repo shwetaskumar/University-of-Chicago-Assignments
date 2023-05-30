@@ -1,0 +1,9 @@
+INSTRUCTIONS: You have been given a different data set - statistics from professional golfers (LPGA Data).
+
+Please review this data set and let's start a discussion thread on this sample of data.
+
+Answer the following questions and respond to at least two of your classmates.
+
+What are the potential target variable(s) for supervised learning in the LPGA data set?
+How would you use unsupervised learning to create groups of golfers that are different as groups but similar to each other?
+What are some interesting data visualizations on this data set? 

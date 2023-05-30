@@ -1,0 +1,48 @@
+TASK: The manager of the movie rental stores wants a dashboard to showcase monitor important metrics and insights regarding rentals at the stores.  You are tasked with making a Tableau dashboard with 5 reports and a filter to dynamically change which store the dashboard is displaying data for. If no individual store is selected, the dashboard reports would include data across all stores.
+
+Build Tableau Reports
+
+Using Tableau, create 5 different reports (one sheet per report) that provides insights using the sakila_snowflake dataset. 
+
+Keep the following in mind:
+
+Connect to the sakila_snowflake schema you created in the previous assignment.
+Use the "Relationship" model of connecting multiple tables together instead of the old join method.  See the Tableau documentation for more information: Use Relationships for Multi-Table Data AnalysisLinks to an external site.
+Keep your data source connection to the MySQL database as "live", not an extract.
+Only use the sakila_snowflake schema in your data sources.  Do not include external data sources.
+Give your reports clear, concise names describing their function.
+Make sure that the visualizations that you create make sense together on a dashboard.
+Make sure that your visualizations can have a filter action applied to them (see the Dashboard instructions).
+Create a Dashboard
+
+Create a dashboard based on the report set that you have created:
+
+Place your worksheet reports on a dashboard
+Make sure your reports have clear, concise titles and any necessary comments.
+Add a filter/filter action to your dashboard and reports to dynamically filter the data in at least 3 your dashboard reports to a given store_id.  This means that you should be able to modify a filter on your dashboard and have the underlying data filter and change the visualization results on at least 3 of your reports. 
+Examples
+
+You may use these examples as a starting point, but please do not copy exactly - try be creative and come up with some report ideas of your own. 
+
+Example:
+
+a. Month on month Rentals by film category, store, day of the week, language, film rating.
+b. Month on month Revenue by film category, film, store, language, film rating.
+c. Films that rented out the most
+d. Frequent customers by store
+e. Revenue based on customer geography e.g. city, country
+f. Loss per month quarter, semi-annual & annual, film category, film rating
+g. Available movies for rental across film category, film rating, language.
+h. List of overdue rentals grouped by customers
+i. Number of customers, ranged by the number of rentals made 
+j. Number of rentals for each store and name of store manager 
+k. Actors with the highest demand for rentals
+
+Add a dropdown menu filter on the dashboard to select and filter by a chosen store_id.  If no individual store was selected in the filter (all stores included), then the visualizations would include all data across all stores, and then if one store was selected, the visualization would filter the underlying data to only that store.
+
+Submission Guidelines
+
+Make sure that your data source connections are all "live" and using the sakila_snowflake schema.
+DO NOT use any other data sources or data files other than connecting to the sakila_snowflake schema.
+Submit a .twb Tableau file with the file name convention firstname_lastname_snowflake.twb
+Also submit your sakila_snowflake DDL and DML .sql files from the previous assignment.

@@ -1,9 +1,0 @@
-Database Design/Modeling Techniques
-2424 unread replies.6666 replies.
-There are a few database modeling techniques (e.g. crowfoot, Chen, UML etc.).
-
-Describe each of them briefly (crowfoot, Chen, UML), and explain which one do you prefer and why?
-
-Also how industry follows these principles?
-
-And lastly find a standard industry model (any industry of your choice e.g. health, insurance, banking, travel, etc.) on the internet and share the link with the class.

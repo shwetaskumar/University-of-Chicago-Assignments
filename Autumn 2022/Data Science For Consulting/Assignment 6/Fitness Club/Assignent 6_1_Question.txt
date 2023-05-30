@@ -1,0 +1,13 @@
+Predictive Model Exercise: 
+
+Continuing with the dataset “Fitness Club” that was introduced in Week 4, this week your assignment is to perform the following actions with the data. 
+
+Calculate basic stats descriptive statistics (mean, median, min, max, standard deviation) for each field 
+Visualize distributions of data elements using histograms for key variables and predict which variables you expect to be most correlated with default/churn. 
+Build a Logistic Regression Model to Predict Churn/Retention, you may choose to identify groups within the data to narrow your focus on. (The "default" variable = churn, you may choose to only use age and payment type to build a model to predict "default" = churn) 
+Display the output visually using charts of your choosing and explain your choice. (ROC Curve, Confusion Matrix, Gains Table) 
+In addition to the spreadsheet/code or programming output you submit, include a separate written document of 250-500 words that summarizes your process. 
+Discuss why certain variables you expected to be significant are/are not and any other unexpected insights.
+This assignment is designed to expose you to models and tools the more advanced analyst uses to predict and develop business cases for action. You may need help from a tutor or by watching videos to understand enough to build your first logistic regression model. Experiment with this and make the attempt - even if it is a bit new and uncomfortable.  
+
+We suggest you use Python, R or other tools you are comfortable with. Upload your final deliverable in a notebook or HTML file that is readable for evaluation. 

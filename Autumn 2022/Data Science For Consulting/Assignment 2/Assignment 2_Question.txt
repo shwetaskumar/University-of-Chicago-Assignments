@@ -1,0 +1,6 @@
+Perform steps 1-5 of Exploratory Data Analysis. 
+(from Page 8 of Reading on Business and Data Discovery - Exploratory Data Analysis steps)
+State the problem described by the client & desired outcomes. 
+Describe your hypothesis identifying the business drivers (influences). 
+Identify variables available that relate to business drivers.
+Submit the information from steps 2-4 above (problem statement, hypothesis, variables) in a Word document for this assignment. (Separately, you may submit your EDA work within an HTML file or PDF for reference)

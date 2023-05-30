@@ -1,0 +1,14 @@
+Data: Ecommerce Data Set: Online Book RFM Data (See Sample data spreadsheet tab with this name)
+
+Challenge: Develop a “Recommendation Engine” AI solution for a Website using an Unsupervised segmentation/clustering approach complete with economic analysis and presentation to management to convince the CMO and Webmaster to implement the solution.
+
+Description: An ecommerce website currently recommends “most popular” items to all users with the hope that users will add items to their shopping cart and increase the size of each purchase. This approach is successful by increasing sales for the website and the current CMO/Webmaster do not believe there is a more intelligent solution that is more relevant to each users based on their prior purchases and relationship with the ecommerce website.
+
+INSTRUCTIONS
+
+Economic Challenge for Your Final Deliverable:
+
+Assume your approach delivers +20% incremental sales from the most engaged 15% of customers while delivering a statistically significant improvement (3-5%) on other segments, which is not expected to be sufficient to get the CMO/Webmaster to allow the change of algorithm for all portions of the customer base. However, you believe the CMO/Webmaster will accept your approach for the top 15% of customers.
+
+Working as a group, develop a presentation and video that helps the CMO/Webmaster to make the best decision for their organization based on your analysis. Utilize the best answers from your team from the first 6 questions to help build your case. Create a data driven argument using hypothetical results to show your influence skills to convince the client to make the best decision – deciding whether that includes all segments or only the top 15%.
+For your final presentation, you will be expected to create a short 5 minute team video to summarize your results, present your conclusions and influence the CMO/Webmaster in the final class session. We will watch all team videos outside of class and discuss in live sync sessions to leverage strengths of approaches.

@@ -1,0 +1,27 @@
+Dataset Files: assignment7datasets.zipDownload assignment7datasets.zip
+
+Data
+Sakila data, in json form:
+
+customers.json
+films.json
+stores.json
+Questions
+Return the total number of customers living in California
+List all movies that are rated NC-17.  Return the title and the rating, sorted alphabetically by title.
+List the movie titles and the count of actors in each movie, sorted alphabetically by title.
+List the count of movies by category.  Return the category and the count, sorted by the count per category descending.
+List the top 2 movies with movie length greater than 25mins or which has commentaries as special features.  Return the movie title, length, and special features.
+List top 10 countries with the most number of customers.
+List all replacement costs along with count for each replacement cost.
+List all films relating to Mexico for a Cinco de Mayo promotion special.
+List all the new releases for 2020 in order to promote them.
+Calculate revenue for the Month of August 2005.
+Find movies with the highest number of Actors.
+List top Movie rating that is rented the most / popular among the customers.
+List number of actors who worked in each category of films.
+Find the average length of movies in each category.
+List the customers with at least 40 rentals.
+Submission
+Submit the answers in a text (".txt") file with the naming format: firstname_lastname_assignment7.txt.  
+For each question, you are required to provide the query for the answer along with any assumptions made. Make sure to include the question numbers and question text.

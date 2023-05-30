@@ -1,0 +1,6 @@
+Perform steps 1-5 of Exploratory Data Analysis. 
+State the problem described by the client & desired outcomes. 
+Describe your hypothesis identifying the business drivers (influences). 
+Identify data issues that might influence model selection
+Identify all factors that might influence model selection process
+Submit the information from steps 2-5 in a Word document for this assignment.
