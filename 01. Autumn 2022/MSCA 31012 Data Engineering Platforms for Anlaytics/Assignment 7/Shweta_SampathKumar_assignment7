@@ -1,0 +1,303 @@
+/***********************************************
+**                MSc ANALYTICS 
+**     DATA ENGINEERING PLATFORMS (MSCA 31012)
+** Auth:   Shweta Sampath Kumar
+** Date:   11/29/2022
+************************************************/
+
+use "test"
+
+//1. Return the total number of customers living in California
+//Using find() on customers collection with condition District = California and count() to get the total number of rows of the result.
+db.customers.find(
+    { "District": "California" }
+).count()
+
+//2. List all movies that are rated NC-17.  Return the title and the rating, sorted alphabetically by title.
+//Using find() on movies collection, with condition Rating = NC-17 and sorting the results by the movie title in ascending order using sort(). Using project() I've returned only the rating and the title
+db.films.find(
+    { "Rating": "NC-17" },
+    { _id: "$Title", "Rating": 1 }
+).sort({ "Title": 1 })
+
+//3. List the movie titles and the count of actors in each movie, sorted alphabetically by title.
+//Using aggregate() on films collection, in the project pipline set count of actors = size of the sub-array actors for each film, sorted the results by movie title alphabetically using sort()
+db.films.aggregate([
+    {
+        $project:
+        {
+            _id: "$Title",
+            "Count of Actors": { $size: '$Actors' }
+        }
+    }]).sort({ "Title": 1 })
+
+//4. List the count of movies by category.  Return the category and the count, sorted by the count per category descending.
+//Using aggregate() on films collection, grouped by the categories and found te sum of movies in the category using $sum. Sorted the results by the count in descending order.
+db.films.aggregate([{
+    "$group":
+    {
+        _id: "$Category",
+        "Count of Movies in Category": { $sum: 1 }
+    }
+},
+{
+    $sort:
+        { "Count of Movies in Category": -1 }
+}])
+
+//5. List the top 2 movies with movie length greater than 25mins or which has commentaries as special features.  Return the movie title, length, and special features.
+//Using find() on films collection, the "OR" condition is used to check if the length of the movie is greater than 25 by converting lengt to decimal or if the special features consists of Commentaries. 
+//Regex was used to check for commentaries case-insensitive to ensure all rows with commentaries were checked.
+//Limited the results to the top 2
+db.films.find(
+    {
+        $or: [
+            { $expr: { $gt: [{ $toDecimal: "$Length" }, 25] } },
+            { "Special Features": { $regex: /Commentaries/i } }
+        ]
+    }).project({ "_id": "$Title", "Length": 1, "Special Features": 1 })
+    .limit(2)
+
+//6. List top 10 countries with the most number of customers.
+//Using aggregate() on customers collection, then grouping by Country and finding number of customers in each using $sum.
+//Sort the results by count of customers in descending order and limit the results to 10 to show top 10.
+db.customers.aggregate([
+    {
+        "$group":
+        {
+            _id: "$Country",
+            Count: { $sum: 1 }
+        }
+    },
+    {
+        $sort: {
+            Count: -1
+        }
+    },
+    {
+        $project: {
+            _id: 1,
+            'Count of customers': "$Count",
+        }
+    },
+    {
+        $limit: 10
+    }])
+
+//7. List all replacement costs along with count for each replacement cost.
+//Using aggregate() on films collection, grouped by replacement cost and calculated their count using $sum.
+db.films.aggregate([
+    {
+        "$group":
+        {
+            _id: { $toDecimal: "$Replacement Cost" },
+            "Count of Replacement Cost": { $sum: 1 }
+        }
+    },
+    {
+        $sort: { _id: -1 }
+    }
+])
+
+//8. List all films relating to Mexico for a Cinco de Mayo promotion special.
+//Using find() on films collection, the 'or' operator was used along with regex case-insensitive to find 'Mexico' in the descriptions or title
+//Projected only the movie titles as requested in the question
+db.films.find(
+    {
+        $or:
+            [
+                {
+                    "Title":
+                        { $regex: /Mexico/i }
+                },
+                {
+                    "Description":
+                        { $regex: /Mexico/i }
+                }
+            ]
+    }
+).project({ "Title": 1, _id: 0 })
+
+//9. ---- This question is no longer part of assignment---- List all the new releases for 2020 in order to promote them. 
+db.films.find({})
+
+//10. Calculate revenue for the Month of August 2005.
+//Using aggregate() on customers collection, first unwound the Rentals and sub-array Payments arrays to make the contents of the array more easily accessible for analysis.
+//Using $match, the data was filtered by date to get those with Payment dates within August 2005.
+//Using $group, the filtered rows are grouped by no id to find the ttal revenue by summing the Payment Amount
+//Using $project, the total revenue is displayed for August 2005
+db.customers.aggregate([{ $unwind: "$Rentals" }, { $unwind: "$Rentals.Payments" },
+{
+    $match: {
+        $expr: {
+            $and: [{ '$gt': [{ '$toDate': '$Rentals.Payments.Payment Date' }, ISODate("2005-08-01T00:00:00.000Z")] },
+            { '$lt': [{ '$toDate': '$Rentals.Payments.Payment Date' }, ISODate("2005-09-01T00:00:00.000Z")] }]
+        }
+    }
+},
+{
+    $group:
+    {
+        _id: '',
+        "total":
+        {
+            $sum: "$Rentals.Payments.Amount"
+        }
+    }
+},
+{
+    $project:
+    {
+        _id: 0,
+        "Total Revenue for August 2005": "$total"
+    }
+}
+])
+
+//11. Find movies with the highest number of Actors.
+//Using aggregate() on films collection, the data was grouped by movie title and the count of actors in each title is calulated using $sum and $size to get size array Actors.
+//Using $sort, the results are sorted by number of Actors in descending order to get highest nuber of actors in a movie.
+//Using $project, the results displayed show only the movie titles and the count of actors in that movie
+//The results are limited to the first row using limit() to get the movie with the highest number of actors.
+db.films.aggregate([
+    {
+        $group: {
+            "_id": "$Title",
+            Count: {
+                "$sum": {
+                    "$size": "$Actors"
+                }
+            }
+        }
+    },
+    {
+        $sort: { Count: -1 }
+    },
+    {
+        $project: {
+            _id: 1, "Count of Actors": "$Count"
+        }
+    },
+    {
+        $limit: 1
+    }])
+
+//12. List top Movie rating that is rented the most / popular among the customers.
+//Using aggregate() on customers collection, the rentals array is unwound to make it more accessible by using $unwind.
+//Using $lookup, the collections customers and films are joined over filmId and _id respectively to get the film rating from films collection for each rental.
+//the data is then grouped by rating and their count s calculated using $sum: 
+//The results are sorted by the count of rentals in descending order and limited to the first row to getthe most popular movie rating
+db.customers.aggregate([{ $unwind: "$Rentals" },
+{
+    $lookup: {
+        from: "films",
+        localField: "Rentals.filmId",
+        foreignField: "_id",
+        as: "film_id"
+    }
+},
+{
+    "$group":
+    {
+        _id: "$film_id.Rating",
+        Count:
+        {
+            $sum: 1
+        }
+    }
+},
+{
+    $sort:
+    {
+        Count: -1
+    }
+},
+{
+    $limit: 1
+},
+{
+    $project:
+    {
+        _id: 0,
+        "Most popular movie rating": "$_id"
+    }
+}
+])
+
+//13. List number of actors who worked in each category of films.
+//Did 2 ways, one calculating non distinct actors, other calculating distinct actors across each category
+
+//-----Not distinct
+//using aggregate() on films collection, grouped the data by caegory and calculated number of actors across each category usng $sum of the size of the Actors array
+db.films.aggregate([
+    {
+        $group:
+        {
+            _id: "$Category",
+            "Count of Actors":
+            {
+                $sum:
+                    { $size: "$Actors" }
+            }
+        }
+    }
+]) //Not distinct
+
+
+//-------Distinct
+//Using aggregate() on films cllection, the Actors sub-array is unwound using $unwind to make it more accessible.
+//The data is then grouped by Category and the actors are added as an array to each category using $addtoset to avoid duplicates.
+//The results are then projected by showing each category and the number of actors by calculating the length ofthe array using $size.
+db.films.aggregate([
+    {
+        $unwind: "$Actors"
+    },
+    {
+        $group:
+        {
+            _id: "$Category",
+            uniqueCount: {
+                $addToSet: "$Actors"
+            }
+        }
+    },
+    {
+        $project:
+        {
+            _id: 1,
+            "Actor Count": { $size: "$uniqueCount" }
+        }
+    }
+]);
+
+//14. Find the average length of movies in each category.
+//Using aggregate() on the films collection, the data is grouped by movie category and the average length of the movies calculated by using $avg and changing the length to decimal to make it numerical from string.
+db.films.aggregate([
+    {
+        $group:
+        {
+            _id: "$Category",
+            "Average Length of movies":
+            {
+                $avg:
+                    { $toDecimal: "$Length" }
+            }
+        }
+    }
+])
+
+//15. List the customers with at least 40 rentals.
+//Using find() on customers collection, the lengths of the Rentals array was checked if it was greater than or equal to 40.
+//$project is used to show the customer's first and last name along with the number of rentals.
+
+db.customers.find(
+    {
+        $expr:
+        {
+            $gte:
+                [
+                    {
+                        $size: "$Rentals"
+                    }, 40]
+        }
+    }).project({ "First Name": 1, "Last Name": 1, "Number of Rentals": { $size: "$Rentals" }, _id: 0 })
